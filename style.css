@@ -1,4 +1,104 @@
-h1{
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{   
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    height: 50px;
+    background-color: grey;
+    padding: 20px;
     text-align: center;
-    color: brown;
+}
+
+header #aide{
+    cursor: pointer;
+}
+
+main{
+    flex: 1;
+    padding: 20px;
+
+}
+
+main .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer{
+    height: 50px;
+    background-color: grey;
+    padding: 20px;
+}
+
+main #table {
+    border: 1px solid black;
+    height: 420px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: grey;
+    box-shadow: 0 0 10px black;
+}
+
+td{
+    text-align: center;
+    border: 1px solid black;
+    font-size: 50px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+
+main .section1{
+    height: 420px;
+    width: 350px;
+    background-color: grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+main .section3{
+    height: 420px;
+    width: 350px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+main .section1 #carre{
+    height: 100px ;
+    width: 100px ;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .section1 #Lancer{
+    height: 30px;
+    width: 100px ;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px black;
+    border-radius: 20px;
+}
+
+main .section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
