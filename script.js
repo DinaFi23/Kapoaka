@@ -1,4 +1,3 @@
-//let tab = [1, 2, 3, 4, 5, 6];
 const un = document.getElementById("un");
 const deux = document.getElementById("deux");
 const trois = document.getElementById("trois");
@@ -11,20 +10,22 @@ const erreur = document.getElementById("erreur");
 const alert2 = document.getElementById("alert");
 const aide = document.getElementById("aide");
 const main = document.getElementById("main");
+const cacher = document.getElementById("cacher");
 let nombre;
 let nombre2;
+let explication = false ; 
 
 un.addEventListener('click',()=>{
     if ( nombre2 != null) {
         console.log("Vous ne pouvez pas miser sur deux chiffres !")
     } else{
         nombre2 = 1;
-        un.style.backgroundColor = "gray" ; 
+        un.style.backgroundColor = "rgb(236, 42, 42)" ; 
         console.log(nombre2);
     }
     un.addEventListener('dblclick',()=>{
         nombre2 = null ;  
-        un.style.backgroundColor = "whitesmoke" ; 
+        un.style.backgroundColor = "rgb(32, 32, 32)" ; 
         console.log(nombre2);
     })
    
@@ -35,12 +36,12 @@ deux.addEventListener('click',()=>{
         console.log("Vous ne pouvez pas miser sur deux chiffres !")
     } else{
         nombre2 = 2;
-        deux.style.backgroundColor = "gray" ; 
+        deux.style.backgroundColor = "rgb(236, 42, 42)" ; 
         console.log(nombre2);
     }
     deux.addEventListener('dblclick',()=>{
         nombre2 = null ;  
-        deux.style.backgroundColor = "whitesmoke" ; 
+        deux.style.backgroundColor = "rgb(32, 32, 32)" ; 
         console.log(nombre2);
     })
 })
@@ -50,11 +51,11 @@ trois.addEventListener('click',()=>{
         console.log("Vous ne pouvez pas miser sur deux chiffres !")
     } else{
         nombre2 = 3;
-        trois.style.backgroundColor = "gray" ; 
+        trois.style.backgroundColor = "rgb(236, 42, 42)" ; 
     }
     trois.addEventListener('dblclick',()=>{
         nombre2 = null ;  
-        trois.style.backgroundColor = "whitesmoke" ; 
+        trois.style.backgroundColor = "rgb(32, 32, 32)" ; 
         console.log(nombre2);
     })
 })
@@ -64,12 +65,12 @@ quatre.addEventListener('click',()=>{
         console.log("Vous ne pouvez pas miser sur deux chiffres !")
     } else{
         nombre2 = 4;
-       quatre.style.backgroundColor = "gray" ; 
+       quatre.style.backgroundColor = "rgb(236, 42, 42)" ; 
        console.log(nombre2);
     }
     quatre.addEventListener('dblclick',()=>{
         nombre2 = null ;  
-        quatre.style.backgroundColor = "whitesmoke" ; 
+        quatre.style.backgroundColor = "rgb(32, 32, 32)" ; 
         console.log(nombre2);
     })
 })
@@ -79,12 +80,12 @@ cinq.addEventListener('click',()=>{
         console.log("Vous ne pouvez pas miser sur deux chiffres !")
     } else{
         nombre2 = 5;
-        cinq.style.backgroundColor = "gray" ;
+        cinq.style.backgroundColor = "rgb(236, 42, 42)" ;
         console.log(nombre2); 
     }
     cinq.addEventListener('dblclick',()=>{
         nombre2 = null ;  
-        cinq.style.backgroundColor = "whitesmoke" ; 
+        cinq.style.backgroundColor = "rgb(32, 32, 32)" ; 
         console.log(nombre2);
     })
 })
@@ -94,12 +95,12 @@ six.addEventListener('click',()=>{
         console.log("Vous ne pouvez pas miser sur deux chiffres !")
     } else{
         nombre2 = 6;
-        six.style.backgroundColor = "gray" ;
+        six.style.backgroundColor = "rgb(236, 42, 42)" ;
         console.log(nombre2);
     }
     six.addEventListener('dblclick',()=>{
         nombre2 = null ;  
-        six.style.backgroundColor = "whitesmoke" ; 
+        six.style.backgroundColor = "rgb(32, 32, 32)" ; 
         console.log(nombre2);
     })
 })
@@ -135,5 +136,16 @@ lancer.addEventListener("click",()=>{
 });
 
 aide.addEventListener('click',()=>{
-    main.style.visibility = "hidden";
+
+    if(explication){
+        main.style.visibility = "hidden";
+        aide.textContent = "Compris ! ";
+        cacher.style.visibility = "visible";
+    }else{
+        main.style.visibility = "visible";
+        aide.textContent = "Comment jouez ?";
+        cacher.style.visibility = "hidden";
+    }
+    
+    explication = !explication ;
 })
